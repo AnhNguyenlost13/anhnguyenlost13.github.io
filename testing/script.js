@@ -28,4 +28,5 @@ function updateContent(currentLanguageIndex) {
             translations[i].style.display = 'none';
         }
     }
+}
 });
