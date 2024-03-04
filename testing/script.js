@@ -15,11 +15,11 @@ langSelector.addEventListener('click', function() {
     const selectedLanguage = languages[currentLanguageIndex];
     document.querySelector('.selected_language').textContent = selectedLanguage;
     // Call a function to update the page content based on the selected language
-    updateContent(currentLanguageIndex);
+    updateContent(selectedLanguage);
 });
 
 // Function to update the page content based on the selected language
-function updateContent(currentLanguageIndex) {
+function updateContent(selectedLanguage) {
     var translations = document.getElementsByClassName('localized');
     for (var i = 0; i < translations.length; i++) {
         if (translations[i].id === selectedLanguage) {
