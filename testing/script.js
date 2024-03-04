@@ -20,10 +20,12 @@ langSelector.addEventListener('click', function() {
 
 // Function to update the page content based on the selected language
 function updateContent(currentLanguageIndex) {
-  if (currentLanguageIndex == 0) {
-    document.getElementsByClassName('content_en').style.display = 'block';
-  } else {
-    document.getElementsByClassName('content_ro').style.display = 'block';
-  }
-}
+    var translations = document.getElementsByClassName('localized');
+    for (var i = 0; i < translations.length; i++) {
+        if (translations[i].id === selectedLanguage) {
+            translations[i].style.display = 'block';
+        } else {
+            translations[i].style.display = 'none';
+        }
+    }
 });
