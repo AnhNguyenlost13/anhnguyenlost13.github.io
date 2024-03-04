@@ -26,4 +26,4 @@ function updateContent(currentLanguageIndex) {
     document.getElementsByClassName('content_ro').style.display = 'block';
   }
 }
-}
+});
