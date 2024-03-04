@@ -4,7 +4,7 @@ const languages = ['🇺🇸 English (en-US)', '🇷🇴 Romanian (ro-RO)'];
 // Initial language index
 let currentLanguageIndex = 0;
 
-const langSelector = document.querySelector('.selected_language');
+const langSelector = document.querySelector('.lang_selector');
 
 // Listen for click event on lang_selector
 langSelector.addEventListener('click', function() {
