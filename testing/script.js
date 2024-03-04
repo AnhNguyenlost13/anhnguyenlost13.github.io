@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', function() {
+
 // Define the languages
 const languages = ['🇺🇸 English (en-US)', '🇷🇴 Romanian (ro-RO)'];
 
@@ -23,4 +25,5 @@ function updateContent(currentLanguageIndex) {
   } else {
     document.getElementsByClassName('content_ro').style.display = 'block';
   }
+}
 }
