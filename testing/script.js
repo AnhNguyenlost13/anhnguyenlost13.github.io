@@ -4,7 +4,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
 // Define the strings
-const prettyLanguages = ['🇺🇸 English (en-US)', '🇷🇴 Romanian (ro-RO)'];
+const prettyLanguages = ['🇺🇸 English (en-US)', '🇷🇴 Română (ro-RO)'];
 const pageTitles = ['Elixhost.biz Terms and Conditions', 'Elixhost.biz Termeni și Condiții']
 const readTimes = ['8 min. read', '8 min. citit']
 
