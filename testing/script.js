@@ -26,7 +26,7 @@ langSelector.addEventListener('click', function() {
 function updateContent(selectedLanguageIdentifier) {
     var translations = document.getElementsByClassName('localized');
     for (var i = 0; i < translations.length; i++) {
-        if (translations[i].id === selectedLanguage) {
+        if (translations[i].id === selectedLanguageIdentifier) {
             translations[i].style.display = 'block';
         } else {
             translations[i].style.display = 'none';
