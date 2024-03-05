@@ -1,7 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-// Define the languages
+// Define the strings
 const prettyLanguages = ['🇺🇸 English (en-US)', '🇷🇴 Romanian (ro-RO)'];
+const pageTitles = ['Elixhost.biz Terms and Conditions', 'Elixhost.biz Termeni și Condiții']
+const readTimes = ['8 min. read', '8 min. citit']
 
 // These are the internal identifiers used
 const internalIdentifiers = ['content_en', 'content_ro'];
@@ -17,7 +19,13 @@ langSelector.addEventListener('click', function() {
     currentLanguageIndex = (currentLanguageIndex + 1) % internalIdentifiers.length;
     const selectedLanguage = prettyLanguages[currentLanguageIndex];
     const selectedLanguageIdentifier = internalIdentifiers[currentLanguageIndex];
+    const pageTitle = pageTitles[currentLanguageIndex];
+    const readTime = readTimes[currentLanguageIndex];
     document.querySelector('.selected_language').textContent = selectedLanguage;
+    document.querySelector('.title').textContent = pageTitle;
+    docukent.querySelector('.readtime').textContent = readTime
+    document.title = pageTitle;
+    
     // Call a function to update the page content based on the selected language
     updateContent(selectedLanguageIdentifier);
 });
