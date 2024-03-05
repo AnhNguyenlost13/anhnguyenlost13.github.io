@@ -14,7 +14,7 @@ const langSelector = document.querySelector('.lang_selector');
 // Listen for click event on lang_selector
 langSelector.addEventListener('click', function() {
     // Toggle between the languages on click
-    currentLanguageIndex = (currentLanguageIndex + 1) % languages.length;
+    currentLanguageIndex = (currentLanguageIndex + 1) % internalIdentifiers.length;
     const selectedLanguage = prettyLanguages[currentLanguageIndex];
     const selectedLanguageIdentifier = internalIdentifiers[currentLanguageIndex];
     document.querySelector('.selected_language').textContent = selectedLanguage;
