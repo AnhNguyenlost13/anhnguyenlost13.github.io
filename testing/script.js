@@ -1,7 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
 
 // Define the languages
-const languages = ['🇺🇸 English (en-US)', '🇷🇴 Romanian (ro-RO)'];
+const prettyLanguages = ['🇺🇸 English (en-US)', '🇷🇴 Romanian (ro-RO)'];
+
+// These are the internal identifiers used
+const internalIdentifiers = ['content_en', 'content_ro'];
 
 // Initial language index
 let currentLanguageIndex = 0;
@@ -12,14 +15,15 @@ const langSelector = document.querySelector('.lang_selector');
 langSelector.addEventListener('click', function() {
     // Toggle between the languages on click
     currentLanguageIndex = (currentLanguageIndex + 1) % languages.length;
-    const selectedLanguage = languages[currentLanguageIndex];
+    const selectedLanguage = prettyLanguages[currentLanguageIndex];
+    const selectedLanguageIdentifier = internalIdentifiers[currentLanguageIndex];
     document.querySelector('.selected_language').textContent = selectedLanguage;
     // Call a function to update the page content based on the selected language
-    updateContent(selectedLanguage);
+    updateContent(selectedLanguageIdentifier);
 });
 
 // Function to update the page content based on the selected language
-function updateContent(selectedLanguage) {
+function updateContent(selectedLanguageIdentifier) {
     var translations = document.getElementsByClassName('localized');
     for (var i = 0; i < translations.length; i++) {
         if (translations[i].id === selectedLanguage) {
