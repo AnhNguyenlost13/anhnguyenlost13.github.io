@@ -23,7 +23,7 @@ langSelector.addEventListener('click', function() {
     const readTime = readTimes[currentLanguageIndex];
     document.querySelector('.selected_language').textContent = selectedLanguage;
     document.querySelector('.title').textContent = pageTitle;
-    document.querySelector('.readtime').textContent = readTime
+    document.querySelector('.readtime').textContent = readTime;
     document.title = pageTitle;
     
     // Call a function to update the page content based on the selected language
