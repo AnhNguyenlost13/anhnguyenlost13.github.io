@@ -34,7 +34,7 @@ langSelector.addEventListener('click', function() {
     document.querySelector('.selected_language').textContent = selectedLanguage;
     document.querySelector('.title').textContent = pageTitle;
     document.querySelector('.readtime').textContent = readTime;
-    document.querySelector('.time').textContent = lastUpdated;
+    document.querySelector('.date').textContent = lastUpdated;
     
     // Yes I did not forget the page title.
     document.title = pageTitle;
