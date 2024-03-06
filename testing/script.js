@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 const prettyLanguages = ['🇺🇸 English (en-US)', '🇷🇴 Română (ro-RO)'];
 const pageTitles = ['Elixhost.biz Terms and Conditions', 'Elixhost.biz Termeni și Condiții']
 const readTimes = ['8 min. read', '8 min. citit']
+const lastUpdates = ['Last updated: 01.03.2024', 'Ultima actualizare: 01.03.2024']
 
 // These are the internal identifiers used
 const internalIdentifiers = ['content_en', 'content_ro'];
@@ -27,11 +28,13 @@ langSelector.addEventListener('click', function() {
     const selectedLanguageIdentifier = internalIdentifiers[currentLanguageIndex];
     const pageTitle = pageTitles[currentLanguageIndex];
     const readTime = readTimes[currentLanguageIndex];
+    const lastUpdated = lastUpdates[currentLanguageIndex];
     
     // Changing the strings
     document.querySelector('.selected_language').textContent = selectedLanguage;
     document.querySelector('.title').textContent = pageTitle;
     document.querySelector('.readtime').textContent = readTime;
+    document.querySelector('.time').textContent = lastUpdated;
     
     // Yes I did not forget the page title.
     document.title = pageTitle;
